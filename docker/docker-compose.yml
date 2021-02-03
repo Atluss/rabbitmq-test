@@ -3,12 +3,12 @@ version: "3"
 services:
 
   rabbitmq:
-    container_name: cn_redis
+    container_name: cn_rabbit
     build:
       context: ./dockerfile
       dockerfile: Dockerfile
       args:
-        - container_name=redis_test
+        - container_name=rabbit_test
     ports:
       - "5672:5672"
       - "15672:15672"
